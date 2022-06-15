@@ -1,0 +1,11 @@
+
+.global_container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    padding: 30px;
+    text-align: left;
+    font-weight: 500;
+}
