@@ -1,0 +1,33 @@
+.bmaindiv{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-rows: repeat(1,1fr); */
+    gap: 20px;
+    /* height: 400px;
+    width: 80%;
+    margin: auto; */
+}
+.bcimg{
+  width: 100%;
+  height: 50%;
+}
+.bcontainer{
+    /* height: 550px; */
+    /* border: 1px solid black; */
+    width: 80%;
+    margin: auto;
+}
+.btopdiv{
+    display: flex;
+    padding-bottom: 20px;
+}
+.bhead{
+    background-color:rgb(0, 132, 255);
+    color: white;
+    font-size: 45px;
+}
+.bheading{
+    display: flex;
+    justify-content: left;
+    font-size: 20px;
+}

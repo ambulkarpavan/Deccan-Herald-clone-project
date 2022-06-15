@@ -1,17 +1,18 @@
-
 import React,{useEffect, useState} from 'react'
 import axios from 'axios';
 
 
 
-const Entertentment = () => {
+const Technology = () => {
 
 
     const[data,setData] =useState([])
 
     useEffect(() => {
     
-    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=6f43be9f49cf4702b914421834ff3c3e")
+    
+    
+    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=6f43be9f49cf4702b914421834ff3c3e")
     .then((response) => {
       console.log(response)
     
@@ -28,7 +29,7 @@ const Entertentment = () => {
     {/* <button className='btn btn-primary'
     
       onClick={getNews}
-      > ENtertenment News</button> */}
+      >Technology News</button> */}
       
         </div>
         <div className='container'>
@@ -71,4 +72,4 @@ const Entertentment = () => {
 
 }
 
-export default Entertentment
+export default Technology

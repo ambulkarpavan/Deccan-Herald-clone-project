@@ -1,0 +1,33 @@
+.maindiv{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* grid-template-rows: repeat(1,1fr); */
+    gap: 20px;
+    /* height: 400px;
+    width: 80%;
+    margin: auto; */
+}
+.cimg{
+  width: 100%;
+  /* height: 50%; */
+}
+.container{
+    /* height: 550px; */
+    /* border: 1px solid black; */
+    width: 80%;
+    margin: auto;
+}
+.topdiv{
+    display: flex;
+    padding-bottom: 20px;
+}
+.head{
+    background-color: #7dbf85;
+    color: white;
+    font-size: 45px;
+}
+.heading{
+    display: flex;
+    justify-content: left;
+    font-size: 20px;
+}

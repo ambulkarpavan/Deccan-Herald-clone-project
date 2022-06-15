@@ -16,17 +16,17 @@ const Home = () => {
       // top head
       axios
         .get(
-          "https://newsapi.org/v2/top-headlines?country=us&apiKey=0262fcb147b7460fa66ab22d917cb183"
+          "https://newsapi.org/v2/top-headlines?country=us&apiKey=a2b079c8bd484bafb175ea65460c5360"
         )
         .then((res) => {
           console.log(res.data.articles);
           setTopHeadLine(res.data.articles);
         });
 
-      // national
+      //national
       axios
         .get(
-          "https://newsapi.org/v2/top-headlines?country=in&apiKey=0262fcb147b7460fa66ab22d917cb183&q=india"
+          "https://newsapi.org/v2/top-headlines?country=in&apiKey=a2b079c8bd484bafb175ea65460c5360&q=india"
         )
         .then((res) => {
         //   console.log(res.data.articles);
@@ -36,7 +36,7 @@ const Home = () => {
       // top bussiness
       axios
         .get(
-          "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=0262fcb147b7460fa66ab22d917cb183"
+          "https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=a2b079c8bd484bafb175ea65460c5360"
         )
         .then((res) => {
         //   console.log(res.data.articles);
@@ -46,7 +46,7 @@ const Home = () => {
       // top Tech
       axios
         .get(
-          "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=0262fcb147b7460fa66ab22d917cb183"
+          "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=a2b079c8bd484bafb175ea65460c5360"
         )
         .then((res) => {
         //   console.log(res.data.articles);
