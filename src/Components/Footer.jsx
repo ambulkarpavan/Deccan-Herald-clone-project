@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom'
 const Footer = () => {
   return (
     <>
-    <div >
+    <div  className={style.fullDiv} >
 
     <Box bg='#0087a8' w='1349' h="308"  p={4} color='black' className={style.footerDiv}>
     
