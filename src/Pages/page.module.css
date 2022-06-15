@@ -1,7 +1,7 @@
 .homeBox{
     width: 90%;
     height: auto;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
