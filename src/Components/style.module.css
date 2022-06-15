@@ -4,14 +4,14 @@
    flex-direction: column;
    width: 100%;
    height: auto;
-   border: 10px solid rebeccapurple;
+   /* border: 10px solid rebeccapurple; */
 
 }
 
 .fullDiv{
     width: 100%;
     height: auto;
-    border: 20px solid blue;
+    /* border: 20px solid blue; */
     box-sizing: border-box;
 }
 .footerDiv  p:hover{
