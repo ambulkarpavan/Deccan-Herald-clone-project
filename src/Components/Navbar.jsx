@@ -3,14 +3,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import styles from "./Navbar.modules.css"
 import img from "./deccan logo(291).png"
 import {Link} from "react-router-dom"
+import { HamburgerIcon } from '@chakra-ui/icons'
+
 // import { AiOutlineAlignRight } from 'react-icons/ai';
 
 
 const Navbar = () => {
   return (
     <div className='navbar_container'>
-      <div  className='navbar_containerA' >
-      <div  className='navbar_container1'>
+       <HamburgerIcon marginLeft={10} marginTop={10} w={8} h={8} />
+      <div  className='navbar_containerA' marginTop={-10} >
+      <div  className='navbar_container1' >
         <img src={img} style={{width:"160px"}} />
       </div>
       {/* <div>
