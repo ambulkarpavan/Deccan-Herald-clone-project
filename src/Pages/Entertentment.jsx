@@ -24,10 +24,37 @@ const Entertentment = () => {
       });
   }, []);
 
+<<<<<<< HEAD
   return (
     <>
       <div className="container my-3">
         {/* <button className='btn btn-primary'
+=======
+    useEffect(() => {
+      if(data.length === 0){
+
+        axios.get("https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=6f43be9f49cf4702b914421834ff3c3e")
+    .then((response) => {
+      console.log(response)
+    
+      setData(response.data.articles)
+    
+    })
+
+        
+      }
+    
+    
+
+    },[])
+
+    return (
+        <>
+        
+        <div className='container my-3'>
+    
+    {/* <button className='btn btn-primary'
+>>>>>>> 1264e90a8259bde4b4d7ffbc1d3f9e250af10489
     
       onClick={getNews}
       > ENtertenment News</button> */}

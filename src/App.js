@@ -22,6 +22,10 @@ import UsDetails from './pages1/UsDetails';
 import SportDetails from './pages1/SportDetails';
 // import { useParams } from 'react-router-dom';
 
+import Tests from './pages1/Tests';
+import Test from './pages1/Test';
+import TopData from './Pages/TopData';
+
 
 
 function App() {
@@ -30,7 +34,9 @@ function App() {
   return (
     <> 
     <div className='App'>
+    
     <Navbar/>
+    
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path='/entertentment' element={<Entertentment />} />
@@ -53,13 +59,21 @@ function App() {
       <Route path='/us/:index' element={<UsDetails />} />
 
       <Route path='/sport' element={<Sport />} />
+<<<<<<< HEAD
       <Route path='/sport/:index' element={<SportDetails />} />
 
      
+=======
+      
+      <Route path ="/national/*" element = { <Tests/>} />
+      <Route path =":id" element = { <Test/>} />
+>>>>>>> 1264e90a8259bde4b4d7ffbc1d3f9e250af10489
     </Routes>
         
         <Footer/>
         </div>
+      
+      
     </>
   );
 }

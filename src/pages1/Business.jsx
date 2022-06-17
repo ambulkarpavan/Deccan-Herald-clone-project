@@ -15,6 +15,7 @@ const Business = () => {
   const [business , setBusiness ] = useState([]);             
 
   useEffect(() => {
+<<<<<<< HEAD
     axios({
       url: "https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=6f43be9f49cf4702b914421834ff3c3e",
       method: "GET",
@@ -22,6 +23,21 @@ const Business = () => {
        setBusiness(r.data.articles);
     });
   });
+=======
+    const API = "8567baa900c743778110f4f711896408"
+    if(business.length ==0){
+      axios({
+        url: `https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${API}`,
+        method: "GET",
+      }).then((r) => {
+         setBusiness(r.data.articles);
+      });
+
+
+    }
+  
+  },[]);
+>>>>>>> 1264e90a8259bde4b4d7ffbc1d3f9e250af10489
 
   return (
     <div className={styles.bcontainer}>

@@ -72,7 +72,7 @@ const Us = () => {
               
                 <div className='col-3' key={index}>
     
-                <div className="card" style={{width:  "18rem",margin: "10px",height:"300px",fontSize:"10px"}}>
+                <div className="card" style={{width:  "18rem",margin: "10px",height:"300px",fontSize:"15px"}}>
                    <img src={value.urlToImage} className="card-img-top" alt="..."/>
                    <div className="card-body" style={{fontsize:""}}>
                    <Link to={`/us/${index}`}> <h5 className="card-title">{value.title}</h5></Link>

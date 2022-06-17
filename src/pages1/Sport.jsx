@@ -14,8 +14,10 @@ import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 
 const Sport = () => {
   const [sports, setSports] = useState([]);
+ 
 
   useEffect(() => {
+<<<<<<< HEAD
     axios({
       url: "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=6f43be9f49cf4702b914421834ff3c3e",
       method: "GET",
@@ -23,6 +25,21 @@ const Sport = () => {
       setSports(r.data.articles);
     });
   });
+=======
+    const API = "8567baa900c743778110f4f711896408"
+    if(sports.length === 0){
+      axios({
+        url: `https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=${API}`,
+        method: "GET",
+      }).then((r) => {
+        setSports(r.data.articles);
+      });
+
+
+    }
+  
+  },[]);
+>>>>>>> 1264e90a8259bde4b4d7ffbc1d3f9e250af10489
 
   return (
     <div className={styles.container}>

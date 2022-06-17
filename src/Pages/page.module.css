@@ -2,13 +2,25 @@
     width: 90%;
     height: auto;
     /* border: 1px solid black; */
-    margin: auto;
+    
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: auto;
     gap: 10px;
    
 
+}
+
+.homeNational{
+    width: 90%;
+    height: auto;
+    /* border: 1px solid black; */
+    
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+   flex-wrap: wrap;
 }
 
 .test{
