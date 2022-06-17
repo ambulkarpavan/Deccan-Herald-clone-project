@@ -10,14 +10,21 @@ const Entertentment = () => {
     const[data,setData] =useState([])
 
     useEffect(() => {
-    
-    axios.get("https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=6f43be9f49cf4702b914421834ff3c3e")
+      if(data.length === 0){
+
+        axios.get("https://newsapi.org/v2/top-headlines?country=in&category=entertainment&apiKey=6f43be9f49cf4702b914421834ff3c3e")
     .then((response) => {
       console.log(response)
     
       setData(response.data.articles)
     
     })
+
+        
+      }
+    
+    
+
     },[])
 
     return (

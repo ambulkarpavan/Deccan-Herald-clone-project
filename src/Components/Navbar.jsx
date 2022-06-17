@@ -81,7 +81,12 @@ const Navbar = () => {
       <Link to="/sport" className="btn">Sport</Link>
       <Link to="/business" className="btn">Business</Link>
       <Link to="/science" className="btn">Science</Link>
+
+      <Link to="/national/*" className="btn">Tests</Link>
+
+
      
+
 
         {/* <button type="button" className="btn">Home</button> */}
         {/* <button type="button" className="btn">Global</button> */}

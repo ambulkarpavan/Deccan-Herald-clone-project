@@ -5,15 +5,22 @@ import styles from "./SportsStyle.module.css";
 
 const Sport = () => {
   const [sports, setSports] = useState([]);
+ 
 
   useEffect(() => {
-    axios({
-      url: "https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=a2b079c8bd484bafb175ea65460c5360",
-      method: "GET",
-    }).then((r) => {
-      setSports(r.data.articles);
-    });
-  });
+    const API = "8567baa900c743778110f4f711896408"
+    if(sports.length === 0){
+      axios({
+        url: `https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=${API}`,
+        method: "GET",
+      }).then((r) => {
+        setSports(r.data.articles);
+      });
+
+
+    }
+  
+  },[]);
 
   return (
     <div className={styles.container}>
