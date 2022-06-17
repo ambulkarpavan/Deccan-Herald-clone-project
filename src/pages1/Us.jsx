@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react'
 import axios from 'axios'
-import Card from 'react-bootstrap/Card';
+// import Card from 'react-bootstrap';
 
 const Us = () => {
 
