@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes,Route } from 'react-router-dom';
@@ -14,10 +14,19 @@ import Science from './pages1/Science';
 import Technology from './pages1/Technology';
 import Us from './pages1/Us';
 import Sport from './pages1/Sport';
+import EntertainmentDetails from './Pages/EntertainmentDetails';
+import BusinessDetails from './pages1/BusinessDetails';
+import NationalDetails from './pages1/NationalDetails';
+import TechnologyDetails from './pages1/TechnologyDetails';
+import UsDetails from './pages1/UsDetails';
+import SportDetails from './pages1/SportDetails';
+// import { useParams } from 'react-router-dom';
 
 
 
 function App() {
+
+  // console.log(useParams(),"useparam")
   return (
     <> 
     <div className='App'>
@@ -25,12 +34,28 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>} />
       <Route path='/entertentment' element={<Entertentment />} />
+      <Route path='/entertentment/:index' element={<EntertainmentDetails />} />
+      
+
       <Route path='/business' element={<Business />} />
+      <Route path='/business/:index' element={<BusinessDetails />} />
+
       <Route path='/national' element={<National />} />
+      <Route path='/national/:index' element={<NationalDetails />} />
+
       <Route path='/science' element={<Science />} />
+      {/* <Route path='/science/:index' element={<ScienceDetails />} /> */}
+
       <Route path='/technology' element={<Technology />} />
+      <Route path='/technology/:index' element={<TechnologyDetails />} />
+
       <Route path='/us' element={<Us />} />
+      <Route path='/us/:index' element={<UsDetails />} />
+
       <Route path='/sport' element={<Sport />} />
+      <Route path='/sport/:index' element={<SportDetails />} />
+
+     
     </Routes>
         
         <Footer/>
