@@ -1,6 +1,18 @@
 import React,{useEffect, useState} from 'react'
 import axios from 'axios'
+
 // import Card from 'react-bootstrap';
+
+import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbSeparator,
+} from '@chakra-ui/react'
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+
 
 const Us = () => {
 
@@ -32,18 +44,43 @@ const Us = () => {
       >US News</button> */}
         </div>
         <div className='container'>
+        <div>
+    <Breadcrumb>
+<BreadcrumbItem>
+<BreadcrumbLink href='#'>Home</BreadcrumbLink>
+</BreadcrumbItem>
+
+<BreadcrumbItem isCurrentPage>
+<BreadcrumbLink href='#'>Us</BreadcrumbLink>
+</BreadcrumbItem>
+</Breadcrumb>
+</div>
+<div style={{borderBottom:"1px solid rgb(154, 149, 149)"}}>
+<Tabs variant='unstyled'>
+  <TabList>
+    <Tab _selected={{ color: 'white', bg: 'green.400', fontWeight:"bold" , fontSize:"30px", paddingRight:"40px"}}>Us</Tab>
+    <Tab >CENTRAL</Tab>
+    <Tab >POLITICS</Tab>
+    <Tab >ENVIRONMENT</Tab>
+    <Tab> SCIENCE</Tab>
+   
     
+  </TabList>
+  
+</Tabs>
+</div>
         <div className='row'>
            {
-            data.map((value) => {
+            data.map((value,index) => {
               return (
               
-                <div className='col-3'>
+                <div className='col-3' key={index}>
     
-                <div className="card" style={{width:  "18rem",margin: "10px",height:"300px",fontSize:"10px"}}>
+                <div className="card" style={{width:  "18rem",margin: "10px",height:"300px",fontSize:"15px"}}>
                    <img src={value.urlToImage} className="card-img-top" alt="..."/>
                    <div className="card-body" style={{fontsize:""}}>
-                     <h5 className="card-title" >{value.title}</h5>
+                   <Link to={`/us/${index}`}> <h5 className="card-title">{value.title}</h5></Link>
+                     {/* <h5 className="card-title" >{value.title}</h5> */}
                   </div>
         </div>
         
