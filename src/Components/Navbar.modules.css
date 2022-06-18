@@ -4,11 +4,11 @@
 
     
     
-    top:0;
+    /* top:0; */
     /* overflow:visible; */
-    z-index: 1;
+    /* z-index: 1;
     position: fixed; 
-      width: 100%;
+      width: 100%; */
     
 
  background-color: #0087a8;
@@ -16,14 +16,14 @@
     /* padding: 10px; */
 }
 .navbar_containerA{
-    width: 100%;
+    width: 90%;
     margin: auto;
-    display: flex;
-
    
    
 
+  display: flex;
 
+  
     gap: 25px;
 
 }
@@ -51,6 +51,7 @@ margin-top: 10px;
     font-size: 15px;
     font-weight: 500;
    border: none;
+   color: white;
 }
 
 .btn:hover{

@@ -82,7 +82,7 @@ const Navbar = () => {
       <Link to="/business" className="btn">Business</Link>
       <Link to="/science" className="btn">Science</Link>
 
-      <Link to="/national/*" className="btn">Tests</Link>
+      {/* <Link to="/national/*" className="btn">Tests</Link> */}
 
 
      

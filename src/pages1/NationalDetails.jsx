@@ -17,7 +17,7 @@ const BusinessDetails = () => {
   console.log(index,"useparambusiness")
 
   useEffect(()=>{
-    axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=b4a2302a208d497c84c94fa9944caf08&q=india`)
+    axios.get(`https://newsapi.org/v2/top-headlines?country=in&apiKey=0262fcb147b7460fa66ab22d917cb183&q=india`)
     .then((r)=>{
       
         console.log(r)

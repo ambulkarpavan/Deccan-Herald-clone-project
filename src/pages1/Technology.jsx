@@ -1,11 +1,7 @@
-
-import React, { useEffect, useState } from "react";
-import axios from "axios";
-import styles from './Technology.module.css'
-
 import React,{useEffect, useState} from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import styles from './Technology.module.css'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -20,20 +16,61 @@ const Technology = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get(
-        "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=b4a2302a208d497c84c94fa9944caf08"
-      )
-      .then((response) => {
-        console.log(response);
+  //   axios
+  //     .get(
+  //       "https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=b4a2302a208d497c84c94fa9944caf08"
+  //     )
+  //     .then((response) => {
+  //       console.log(response);
 
-        setData(response.data.articles);
-      });
-  }, []);
+  //       setData(response.data.articles);
+  //     });
+  // }, []);
+
+  if(data.length ===0){
+    const API="0262fcb147b7460fa66ab22d917cb183"
+    axios.get(`https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=${API}`)
+.then((response) => {
+  console.log(response)
+
+  setData(response.data.articles)
+})
+  }
+},[])
 
 
   return (
     <>
+<div style={{marginLeft:"50px",marginTop:"50px" }}>
+    <Breadcrumb>
+<BreadcrumbItem>
+<BreadcrumbLink href='#'>Home</BreadcrumbLink>
+</BreadcrumbItem>
+
+<BreadcrumbItem isCurrentPage>
+<BreadcrumbLink href='#'>Technology</BreadcrumbLink>
+</BreadcrumbItem>
+</Breadcrumb>
+</div>
+
+
+<div style={{borderBottom:"1px solid rgb(154, 149, 149)",marginLeft:"50px"}}>
+<Tabs variant='unstyled'>
+  <TabList>
+    <Tab _selected={{ color: 'white', bg: 'green.400', fontWeight:"bold" , fontSize:"30px", paddingRight:"40px"}}>Technology</Tab>
+    <Tab >NEWST</Tab>
+    <Tab >LERNABLE</Tab>
+    <Tab >HIKE</Tab>
+    <Tab> EXACT </Tab>
+    
+    
+  </TabList>
+  
+</Tabs>
+</div>
+
+
+
     <h1 className={styles.tech_heading}>TECHNOLOGY</h1>
     <img src="https://tpc.googlesyndication.com/simgad/3634379493742236003?sqp=4sqPyQQ7QjkqNxABHQAAtEIgASgBMAk4A0DwkwlYAWBfcAKAAQGIAQGdAQAAgD-oAQGwAYCt4gS4AV_FAS2ynT4&rs=AOga4qkKcNbZ25NwWiFcn-yR-Q9Jgu83XA" alt=""  className={styles.tech_heading}/>
     {/* top static div */}
@@ -64,116 +101,35 @@ const Technology = () => {
         <h1 className={styles.tech_imghead}>Sagarmala project well underway in Gujarat</h1>
       </div>
       
-      <div className="container">
-        <div className="row">
-          {data.map((value) => {
-            return (
-              <div className="col-3">
-                <div
-                  className="card"
-                  style={{
-                    width: "18rem",
-                    margin: "10px",
-                    height: "300px",
-                    fontSize: "10px",
-                  }}
-                >
-                  <img
-                    src={value.urlToImage}
-                    className="card-img-top"
-                    alt="..."
-                  />
-                  <div className="card-body">
-                    <h5 className="card-title">{value.title}</h5>
-                    {/* <p className="card-text">{value.description}</p>
 
-    useEffect(() => {
-     
-      if(data.length ===0){
-        axios.get("https://newsapi.org/v2/top-headlines?country=in&category=technology&apiKey=6f43be9f49cf4702b914421834ff3c3e")
-    .then((response) => {
-      console.log(response)
-    
-      setData(response.data.articles)
-    
-    })
+      <div className={`  ${styles.mapMainDiv}`}>
 
 
+        {/* left div */}
+      <div className={`row ${styles.mapLeftDiv}`}>      
+       {
+      data.map((value,index) => {
+         return (
+         <div className='col-4' key={index}>
+         <div className="card" style={{width:  "18rem",margin: "10px",height:"300px",fontSize:"15px"}}>
+        <img src={value.urlToImage} className="card-img-top" alt="..."/>
+        <div className="card-body">
+        <Link to={`/technology/${index}`}> <h5 className="card-title">{value.title}</h5></Link>
+        {/* <h5 className="card-title">{value.title}</h5> */}
+        {/* <p className="card-text">{value.description}</p>
 
-      }
-    
-    
-    
-    
-    },[])
-
-    return (
-        <>
-        
-        <div className='container my-3'>
-    
-    {/* <button className='btn btn-primary'
-    
-      onClick={getNews}
-      >Technology News</button> */}
-      
-        </div>
-        <div className='container'>
-        <div>
-    <Breadcrumb>
-<BreadcrumbItem>
-<BreadcrumbLink href='#'>Home</BreadcrumbLink>
-</BreadcrumbItem>
-
-<BreadcrumbItem isCurrentPage>
-<BreadcrumbLink href='#'>Technology</BreadcrumbLink>
-</BreadcrumbItem>
-</Breadcrumb>
-</div>
-<div style={{borderBottom:"1px solid rgb(154, 149, 149)"}}>
-<Tabs variant='unstyled'>
-  <TabList>
-    <Tab _selected={{ color: 'white', bg: 'green.400', fontWeight:"bold" , fontSize:"30px", paddingRight:"40px"}}>Technology</Tab>
-    <Tab >NEWST</Tab>
-    <Tab >LERNABLE</Tab>
-    <Tab >HIKE</Tab>
-    <Tab> EXACT </Tab>
-    
-    
-  </TabList>
-  
-</Tabs>
-</div>
-        <div className='row'>
-
-       
-    
-        
-           {
-            data.map((value,index) => {
-              return (
-                <div className='col-3' key={index}>
-    
-            
-    
-                <div className="card" style={{width:  "18rem",margin: "10px",height:"300px",fontSize:"15px"}}>
-                   <img src={value.urlToImage} className="card-img-top" alt="..."/>
-                   <div className="card-body">
-                   <Link to={`/technology/${index}`}> <h5 className="card-title">{value.title}</h5></Link>
-                     {/* <h5 className="card-title">{value.title}</h5> */}
-                     {/* <p className="card-text">{value.description}</p>
-
-                     <a href="#" className="btn btn-primary">Main News</a> */}
+        <a href="#" className="btn btn-primary">Main News</a> */}
                   </div>
                 </div>
               </div>
             );
           })}
         </div>
-      </div>
 
-    {/* left div */}
-    <div className={styles.rightDiv}>
+
+        {/* right div start */}
+
+        <div className={styles.mapRightDiv}>
             <div>
               <div className={styles.National_imgdiv}>
               <img src="https://www.deccanherald.com/sites/dh/files/styles/largehorizontal/public/articleimages/2022/06/16/rajbhavan2-1-1118593-1655363458.jpg?itok=16cUder7" alt="" />
@@ -187,6 +143,11 @@ const Technology = () => {
               <img src="https://www.deccanherald.com/sites/dh/files/styles/largevertical/public/articleimages/2022/06/15/iit-madras-pti-1-1113478-1653816063-1-1115806-1654520171-1-1118392-1655299602.jpg?itok=n0vnuQN5" alt=""  className={styles.National_imgdiv}/>
             </div>
         </div>
+
+      </div>
+
+   
+    
     </>
   );
 };

@@ -7,6 +7,7 @@
     /* height: 400px;
     width: 80%;
     margin: auto; */
+    font-size: 15px;
 }
 .bcimg{
   width: 100%;
@@ -20,10 +21,12 @@
    
 }
 .btopdiv{
+    width: 80%;
+    margin: auto;
     display: flex;
-    padding-bottom: 20px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-bottom: 50px;
+    /* margin-left: 30px;
+    margin-right: 30px; */
 }
 .bhead{
     background-color:rgb(0, 132, 255);
@@ -45,16 +48,27 @@
 .business_static2{
     background-color:  #f6f6f6;
 }
+
+.business_static2>div img {
+    width: 100px;
+    
+}
 .business_innerdiv{
     display: flex;
+    gap:30px;
+
     padding: 20px;
 }
 .business_bottom_div{
     display: flex;
 }
 .business_adds{
-    padding: 30px;
-    padding-left: 25%;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 50px
+    ;
+    /* padding: 30px;
+    padding-left: 25%; */
 }
 .business_static4{
     padding: 50px;
@@ -62,8 +76,8 @@
 .business_static5{
     padding: 50px;
 }
-.bmaindiv1{
-    border: 1px solid rgb(139, 135, 135);
+.bmaindiv div{
+    border: 1px solid rgb(184, 177, 177);
     /* height: 200px; */
     border-radius: 5px;
 }

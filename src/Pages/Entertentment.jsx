@@ -24,12 +24,6 @@ const Entertentment = () => {
       });
   }, []);
 
-<<<<<<< HEAD
-  return (
-    <>
-      <div className="container my-3">
-        {/* <button className='btn btn-primary'
-=======
     useEffect(() => {
       if(data.length === 0){
 
@@ -54,7 +48,6 @@ const Entertentment = () => {
         <div className='container my-3'>
     
     {/* <button className='btn btn-primary'
->>>>>>> 1264e90a8259bde4b4d7ffbc1d3f9e250af10489
     
       onClick={getNews}
       > ENtertenment News</button> */}
@@ -85,17 +78,17 @@ const Entertentment = () => {
   
 </Tabs>
 </div>
-        <div className="row">
+        <div className="row my-4">
           {data.map((value,index) => {
             return (
               <div className="col-3" key={index}>
                 <div
                   className="card"
                   style={{
-                    width: "18rem",
+                    width: "15rem",
                     margin: "10px",
                     height: "300px",
-                    fontSize: "10px",
+                    fontSize: "15px",
                   }}
                 >
                   <img
